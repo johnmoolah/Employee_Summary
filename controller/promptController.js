@@ -1,9 +1,6 @@
 const inquirer = require("inquirer");
-const { connect } = require("../db/connection");
-const connection = require("../db/connection")
-
-
-
+// const { connect } = require("../db/connection");
+// const connection = require("../db/connection")
 
 module.exports = {
     mainMenu: async function() {
@@ -20,6 +17,7 @@ module.exports = {
         ],
         });
 
+        console.log(menuChoice);
 
 
     },
