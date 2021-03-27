@@ -19,6 +19,26 @@ module.exports = {
 
         console.log(menuChoice);
 
+        switch (menuChoice) {
+            case "John Delizo":
+                employeeJohnD();
+                break;
 
+            case "Fred Gilbert":
+                employeeJohnD();
+                break;
+
+            case "Casey Stone":
+                employeeJohnD();
+                break;
+
+            case "Ernest Hernandez":
+                employeeJohnD();
+                break;
+
+            case "Loren Herrera":
+                employeeJohnD();
+                break;
+        }
     },
 }
