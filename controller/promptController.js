@@ -5,14 +5,12 @@ const inquirer = require("inquirer");
 module.exports = {
     mainMenu: async function() {
         const { menuChoice } =  await inquirer.prompt({
-            message: "Please select an employee",
+            message: "Please select an employee class",
             type: "list",
             name: "employeeChoice",
-            choices: ["John Delizo", 
-            "Fred Gilbert", 
-            "Casey Stone", 
-            "Ernest Hernandez",
-            "Loren Herrera", 
+            choices: ["Manager", 
+            "Engineer", 
+            "Intern", 
             "Exit"
         ],
         });
@@ -20,25 +18,31 @@ module.exports = {
         console.log(menuChoice);
 
         switch (menuChoice) {
-            case "John Delizo":
-                employeeJohnD();
+            case "Manager":
+                managerClass();
                 break;
 
-            case "Fred Gilbert":
-                employeeJohnD();
+            case "Intern":
+                internClass();
                 break;
 
-            case "Casey Stone":
-                employeeJohnD();
-                break;
-
-            case "Ernest Hernandez":
-                employeeJohnD();
-                break;
-
-            case "Loren Herrera":
-                employeeJohnD();
+            case "Engineer":
+                engineerClass();
                 break;
         }
     },
+
+//Logic for Employee questions
+
+    managerClass: async function () {
+            const {name} = await inquirer.prompt ({
+                type: "text",
+                name: "name",
+                message: "What is this employee's email?",
+        });
+
+    await connection.query("INSERT INTO department SET ?", [{ name }]);
+    console.log("Success!!!");
+    this.mainMenu();
+}
 }
