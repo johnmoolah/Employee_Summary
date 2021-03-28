@@ -1,0 +1,19 @@
+DROP DATABASE IF EXISTS employee_summary;
+CREATE DATABASE employee_summary
+USE employee_summary;
+
+CREATE TABLE manager(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    PRIMARY KEY(id)
+);
+CREATE TABLE engineer(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    PRIMARY KEY(id)
+);
+CREATE TABLE intern(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    PRIMARY KEY(id)
+);
